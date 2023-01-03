@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.cyquen.employee.mapper.EmployeeLogMapper">
+    <insert id="addEmployeeLog">
+        insert into employee_log(employee_id, function_id, create_time)
+        values (#{employeeId}, #{functionId}, #{createTime})
+    </insert>
+
+    <select id="findEmployeeLog" resultType="com.cyquen.employee.model.EmployeeLog">
+        select employee_id, create_time, function_id
+        from employee_log
+        where employee_id = #{employeeId}
+          and create_time between #{from} and #{to}
+    </select>
+    <select id="findFunctionIdsByEmployeeId" resultType="java.lang.Integer">
+        select distinct(function_id)
+        from employee_log
+        where employee_id = #{employeeId}
+    </select>
+    <select id="findFrequencyData" resultType="com.cyquen.employee.model.FrequencyData">
+        select date_format(create_time, '%H:00:00') create_time, count(function_id) frequency
+        from employee_log
+        where employee_id = #{employeeId}
+          and create_time between #{start} and #{end}
+        group by date_format(create_time, '%H:00:00')
+        order by date_format(create_time, '%H:00:00')
+    </select>
+</mapper>

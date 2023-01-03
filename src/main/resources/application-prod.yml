@@ -1,0 +1,20 @@
+server:
+  port: 8080
+  servlet:
+    session:
+      timeout: 60m
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/employee?user=root&password=13695932659&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+    type: com.alibaba.druid.pool.DruidDataSource
+  freemarker:
+    request-context-attribute: req
+    template-loader-path: classpath:/templates/
+  cache:
+    type: caffeine
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
