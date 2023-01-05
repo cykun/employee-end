@@ -36,7 +36,12 @@ public class PageController {
      * @return 员工日常分析页面
      */
     @GetMapping("/daily")
-    public ModelAndView index1() {
+    public ModelAndView dailyAnalysis() {
         return new ModelAndView("dailyAnalysis");
+    }
+
+    @GetMapping("/employee")
+    public ModelAndView employeeAnalysis() {
+        return new ModelAndView("employeeAnalysis");
     }
 }

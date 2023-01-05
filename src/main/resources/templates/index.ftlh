@@ -25,6 +25,7 @@
         <ul class="nav nav-pills">
             <li class="nav-item"><a class="nav-link active">员工相似度分析</a></li>
             <li class="nav-item"><a href="/daily" class="nav-link">员工日常分析</a></li>
+            <li class="nav-item"><a href="/employee" class="nav-link">员工信息分析</a></li>
             <li class="nav-item"><a href="/logout" class="nav-link">退出</a></li>
         </ul>
     </header>
@@ -98,10 +99,6 @@
     </footer>
 </div>
 <script>
-    // let loginInfo = localStorage.getItem("loginInfo")
-    // if(loginInfo == null) {
-    //     location.href = "/login"
-    // }
     const {createApp} = Vue
     const app = createApp({
         data() {

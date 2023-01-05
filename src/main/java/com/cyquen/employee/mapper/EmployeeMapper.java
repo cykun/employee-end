@@ -1,6 +1,7 @@
 package com.cyquen.employee.mapper;
 
 import com.cyquen.employee.model.Employee;
+import com.cyquen.employee.model.WorkplaceDistribution;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -14,4 +15,6 @@ public interface EmployeeMapper {
     List<Employee> findAll();
 
     List<Integer> findAllId();
+
+    List<WorkplaceDistribution> findWorkplaceDistribution();
 }

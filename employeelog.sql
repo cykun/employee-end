@@ -1,17 +1,22 @@
 create database employee;
 use employee;
-
+/* 员工表 */
 drop table if exists employee;
 create table employee (
-    id int not null primary key ,
-    name varchar(32) not null
-) CHARSET=utf8;
+    id int not null auto_increment primary key ,
+    name varchar(8) not null, /* 名字 */
+    gender varchar(2) not null, /* 性别 */
+    address varchar(64) not null, /* 家庭地址 */
+    academic_degree varchar(4) not null, /* 学历 */
+    workplace varchar(64) not null, /* 工作地址 */
+    birthdate date not null
+)  CHARSET=utf8 auto_increment=1 comment='员工表';
 
-insert into employee values (1, "员工1");
-insert into employee values (2, "员工2");
-insert into employee values (3, "员工3");
-insert into employee values (4, "员工4");
-insert into employee values (5, "员工5");
+insert into employee values (1, "员工1", "男", "福州市", "硕士", "福州市", 19890102);
+insert into employee values (2, "员工2", "女", "厦门市", "硕士", "福州市", 19880806);
+insert into employee values (3, "员工3", "男", "广州市", "硕士", "深圳市", 19950707);
+insert into employee values (4, "员工4", "男", "上海市", "硕士", "上海市", 19940302);
+insert into employee values (5, "员工5", "女", "福州市", "硕士", "福州市", 19910304);
 
 drop table if exists employee_log;
 create table employee_log (

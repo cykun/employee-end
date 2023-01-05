@@ -2,6 +2,7 @@ package com.cyquen.employee.web;
 
 import com.cyquen.employee.model.EmployeeSimilarity;
 import com.cyquen.employee.model.FrequencyData;
+import com.cyquen.employee.model.WorkplaceDistribution;
 import com.cyquen.employee.service.AnalysisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -67,5 +68,10 @@ public class AnalyseController {
     public List<Map.Entry<Integer, Long>> queryDailyLongestUsage(@RequestParam("employeeId") Integer employeeId,
                                                                  @RequestParam("date") @DateTimeFormat(pattern = "yyyy-MM-dd") Date date) {
         return analysisService.findLongestUsage(employeeId, date);
+    }
+
+    @GetMapping("/employees/workplace-distribution")
+    public List<WorkplaceDistribution> queryWorkplaceDistribution() {
+        return analysisService.findWorkplaceDistribution();
     }
 }

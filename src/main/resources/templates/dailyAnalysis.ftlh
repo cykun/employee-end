@@ -26,6 +26,7 @@
         <ul class="nav nav-pills">
             <li class="nav-item"><a href="/" class="nav-link">员工相似度分析</a></li>
             <li class="nav-item"><a class="nav-link active">员工日常分析</a></li>
+            <li class="nav-item"><a href="/employee" class="nav-link">员工信息分析</a></li>
             <li class="nav-item"><a href="/logout" class="nav-link">退出</a></li>
         </ul>
     </header>

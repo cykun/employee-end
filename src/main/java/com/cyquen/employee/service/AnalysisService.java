@@ -2,6 +2,7 @@ package com.cyquen.employee.service;
 
 import com.cyquen.employee.model.EmployeeSimilarity;
 import com.cyquen.employee.model.FrequencyData;
+import com.cyquen.employee.model.WorkplaceDistribution;
 
 import java.util.Date;
 import java.util.List;
@@ -20,4 +21,6 @@ public interface AnalysisService {
     List<FrequencyData> findDailyFrequencyData(Integer employeeId, Date date);
 
     List<Map.Entry<Integer, Long>> findLongestUsage(Integer employeeId, Date date);
+
+    List<WorkplaceDistribution> findWorkplaceDistribution();
 }

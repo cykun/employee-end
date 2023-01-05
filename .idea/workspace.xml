@@ -5,11 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc8697e6-4d10-4cd6-9366-2f5d941c9f0d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4007e9f6-a656-466b-817e-c4b6c5d00022.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4007e9f6-a656-466b-817e-c4b6c5d00022.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/employeelog.sql" beforeDir="false" afterPath="$PROJECT_DIR$/employeelog.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/config/CacheConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/config/CacheConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/mapper/EmployeeMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/model/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/AnalysisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/AnalysisService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/impl/AnalysisServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/impl/AnalysisServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/util/TimeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/util/TimeUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/web/AnalyseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/web/AnalyseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/web/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/web/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dailyAnalysis.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dailyAnalysis.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.ftlh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/cyquen/employee/ApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cyquen/employee/ApplicationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,40 +49,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "database.data.extractors.current.export.id": "SQL Inserts",
-    "last_opened_file_path": "E:/Code/employee-end/src/main/resources/templates",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "configurable.group.build",
-    "spring.configuration.checksum": "4fd191b4ca68b7abcb3ece9d176351a2",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;database.data.extractors.current.export.id&quot;: &quot;SQL Inserts&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Code/employee-end/src/main/resources/templates&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.build&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;4fd191b4ca68b7abcb3ece9d176351a2&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "sqlite",
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;sqlite&quot;,
+      &quot;mysql&quot;
     ],
-    "RunConfigurationTargetLRU": [
-      "4007e9f6-a656-466b-817e-c4b6c5d00022"
+    &quot;RunConfigurationTargetLRU&quot;: [
+      &quot;4007e9f6-a656-466b-817e-c4b6c5d00022&quot;
+    ],
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
+      &quot;MySQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Code\employee-end\src\main\resources\templates" />
@@ -129,8 +142,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Spring Boot.Application" />
-        <item itemvalue="Application.TimeUtils" />
         <item itemvalue="JUnit.ApplicationTest.getEmployeeLog" />
+        <item itemvalue="Application.TimeUtils" />
         <item itemvalue="Database Script.employeelog.sql" />
       </list>
     </recent_temporary>
@@ -162,12 +175,27 @@
       <workItem from="1672463118857" duration="328000" />
       <workItem from="1672468083964" duration="1778000" />
       <workItem from="1672659953600" duration="3088000" />
-      <workItem from="1672710895170" duration="3348000" />
+      <workItem from="1672710895170" duration="9505000" />
+      <workItem from="1672812152744" duration="11392000" />
+      <workItem from="1672838005017" duration="16000" />
+      <workItem from="1672886786976" duration="754000" />
     </task>
+    <task id="LOCAL-00001" summary="initial version">
+      <created>1672728017577</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1672728017578</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial version" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial version" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

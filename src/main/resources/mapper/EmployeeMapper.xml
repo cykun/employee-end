@@ -11,11 +11,14 @@
         where id = #{id}
     </select>
     <select id="findAll" resultType="com.cyquen.employee.model.Employee">
-        select *
+        select id, name
         from employee
     </select>
     <select id="findAllId" resultType="java.lang.Integer">
         select id
         from employee
+    </select>
+    <select id="findWorkplaceDistribution" resultType="com.cyquen.employee.model.WorkplaceDistribution">
+        select workplace, count(1) population from employee group by workplace
     </select>
 </mapper>

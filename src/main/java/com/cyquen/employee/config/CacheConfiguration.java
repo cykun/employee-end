@@ -8,6 +8,9 @@ import org.springframework.context.annotation.Configuration;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 缓存配置
+ */
 @Configuration
 public class CacheConfiguration {
 

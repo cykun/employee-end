@@ -25,6 +25,8 @@ public class ApplicationTest {
     public void getEmployeeLog() {
         // System.out.println(employeeLogMapper.findEmployeeLog());
 //        System.out.println(employeeMapper.findAllId());
-        System.out.println(employeeLogMapper.findFrequencyData(1, new Date(0), new Date(System.currentTimeMillis())));
+        //System.out.println(employeeLogMapper.findFrequencyData(1, new Date(0), new Date(System.currentTimeMillis())));
+
+        System.out.println(employeeMapper.findWorkplaceDistribution());
     }
 }

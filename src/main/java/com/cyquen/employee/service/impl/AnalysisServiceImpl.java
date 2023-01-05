@@ -80,7 +80,7 @@ public class AnalysisServiceImpl implements AnalysisService {
      *
      * @return 相似程度
      */
-    public double computeCosine(Set<Integer> u1Set, Set<Integer> u2Set) {
+    private double computeCosine(Set<Integer> u1Set, Set<Integer> u2Set) {
         Set<Integer> intersection = u1Set.parallelStream().filter(u2Set::contains).collect(Collectors.toSet());
         // 余弦相似度公式中的分子
         double molecule = intersection.size();
@@ -122,5 +122,10 @@ public class AnalysisServiceImpl implements AnalysisService {
             }
         }
         return priorityQueue.stream().toList();
+    }
+
+    @Override
+    public List<WorkplaceDistribution> findWorkplaceDistribution() {
+        return employeeMapper.findWorkplaceDistribution();
     }
 }
