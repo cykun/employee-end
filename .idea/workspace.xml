@@ -5,20 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc8697e6-4d10-4cd6-9366-2f5d941c9f0d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4007e9f6-a656-466b-817e-c4b6c5d00022.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4007e9f6-a656-466b-817e-c4b6c5d00022.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employeelog.sql" beforeDir="false" afterPath="$PROJECT_DIR$/employeelog.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/config/CacheConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/config/CacheConfiguration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/mapper/EmployeeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/model/Employee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/AnalysisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/AnalysisService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/impl/AnalysisServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/impl/AnalysisServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/util/TimeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/util/TimeUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/web/AnalyseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/web/AnalyseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/web/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/web/PageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dailyAnalysis.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dailyAnalysis.ftlh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.ftlh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/cyquen/employee/ApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cyquen/employee/ApplicationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +170,7 @@
       <workItem from="1672710895170" duration="9505000" />
       <workItem from="1672812152744" duration="11392000" />
       <workItem from="1672838005017" duration="16000" />
-      <workItem from="1672886786976" duration="754000" />
+      <workItem from="1672886786976" duration="10248000" />
     </task>
     <task id="LOCAL-00001" summary="initial version">
       <created>1672728017577</created>
@@ -187,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672728017578</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add employee workplace analysis">
+      <created>1672887787143</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1672887787144</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -195,7 +194,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial version" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial version" />
+    <MESSAGE value="add employee workplace analysis" />
+    <option name="LAST_COMMIT_MESSAGE" value="add employee workplace analysis" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

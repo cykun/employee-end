@@ -1,5 +1,6 @@
 package com.cyquen.employee.mapper;
 
+import com.cyquen.employee.model.Count;
 import com.cyquen.employee.model.Employee;
 import com.cyquen.employee.model.WorkplaceDistribution;
 import org.apache.ibatis.annotations.Mapper;
@@ -17,4 +18,8 @@ public interface EmployeeMapper {
     List<Integer> findAllId();
 
     List<WorkplaceDistribution> findWorkplaceDistribution();
+
+    List<Count> findAgeRangeNumber();
+
+    List<Count> findGenderNumber();
 }

@@ -1,5 +1,6 @@
 package com.cyquen.employee.web;
 
+import com.cyquen.employee.model.Count;
 import com.cyquen.employee.model.EmployeeSimilarity;
 import com.cyquen.employee.model.FrequencyData;
 import com.cyquen.employee.model.WorkplaceDistribution;
@@ -14,7 +15,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- *  数据分析控制器
+ * 数据分析控制器
  */
 @RestController
 public class AnalyseController {
@@ -48,7 +49,7 @@ public class AnalyseController {
      * 查找员工日常使用情况
      *
      * @param employeeId 员工 ID
-     * @param date 日期
+     * @param date       日期
      * @return 访问频率情况
      */
     @GetMapping("/employees/daily")
@@ -61,7 +62,7 @@ public class AnalyseController {
      * 查找员工在哪些功能使用时间比较长
      *
      * @param employeeId 员工 ID
-     * @param date 日期
+     * @param date       日期
      * @return 结果列表
      */
     @GetMapping("/employees/daily/longest")
@@ -73,5 +74,10 @@ public class AnalyseController {
     @GetMapping("/employees/workplace-distribution")
     public List<WorkplaceDistribution> queryWorkplaceDistribution() {
         return analysisService.findWorkplaceDistribution();
+    }
+
+    @GetMapping("/employees/statistics/{type}")
+    public List<Count> queryStatistics(@PathVariable("type") String type) {
+        return analysisService.statistics(type);
     }
 }

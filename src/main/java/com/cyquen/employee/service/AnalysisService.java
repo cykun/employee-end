@@ -1,8 +1,10 @@
 package com.cyquen.employee.service;
 
+import com.cyquen.employee.model.Count;
 import com.cyquen.employee.model.EmployeeSimilarity;
 import com.cyquen.employee.model.FrequencyData;
 import com.cyquen.employee.model.WorkplaceDistribution;
+import org.checkerframework.checker.units.qual.C;
 
 import java.util.Date;
 import java.util.List;
@@ -23,4 +25,6 @@ public interface AnalysisService {
     List<Map.Entry<Integer, Long>> findLongestUsage(Integer employeeId, Date date);
 
     List<WorkplaceDistribution> findWorkplaceDistribution();
+
+    List<Count> statistics(String type);
 }

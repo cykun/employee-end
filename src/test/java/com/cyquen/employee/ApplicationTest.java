@@ -27,6 +27,6 @@ public class ApplicationTest {
 //        System.out.println(employeeMapper.findAllId());
         //System.out.println(employeeLogMapper.findFrequencyData(1, new Date(0), new Date(System.currentTimeMillis())));
 
-        System.out.println(employeeMapper.findWorkplaceDistribution());
+        System.out.println(employeeMapper.findAgeRangeNumber());
     }
 }
