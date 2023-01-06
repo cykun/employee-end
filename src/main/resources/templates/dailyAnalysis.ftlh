@@ -128,7 +128,6 @@
                     };
                     myChart.setOption(option);
                 })
-                console.log(this.date)
                 this.axiosInstance.get('/employees/daily/longest', {
                     params: {
                         employeeId: this.employeeId,
@@ -143,8 +142,6 @@
                         keys = keys.concat(Object.keys(obj))
                         values = values.concat(Object.values(obj)[0] / 1000)
                     }
-                    console.log(keys)
-                    console.log(values)
 
                     option = {
                         xAxis: {
@@ -192,10 +189,6 @@
                     let myChart = echarts.init(document.getElementById('dailyLongestUsage'));
                     myChart.setOption(option);
                 })
-            },
-            logout() {
-                localStorage.removeItem("loginInfo")
-                window.location.href = "/login"
             }
         }
     })

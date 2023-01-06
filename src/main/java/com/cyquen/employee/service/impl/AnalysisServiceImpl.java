@@ -131,11 +131,11 @@ public class AnalysisServiceImpl implements AnalysisService {
 
     @Override
     public List<Count> statistics(String type) {
-        if(type.equals("age")) {
-            return employeeMapper.findAgeRangeNumber();
-        } else if(type.equals("gender")) {
-            return employeeMapper.findGenderNumber();
-        }
-        return null;
+        return switch (type) {
+            case "age" -> employeeMapper.findAgeRangeNumber();
+            case "gender" -> employeeMapper.findGenderNumber();
+            case "post" -> employeeMapper.findPostNumber();
+            default -> null;
+        };
     }
 }

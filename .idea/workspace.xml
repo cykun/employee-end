@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cc8697e6-4d10-4cd6-9366-2f5d941c9f0d" name="Changes" comment="">
+    <list default="true" id="cc8697e6-4d10-4cd6-9366-2f5d941c9f0d" name="Changes" comment="add post analysis">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4007e9f6-a656-466b-817e-c4b6c5d00022.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4007e9f6-a656-466b-817e-c4b6c5d00022.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/mapper/EmployeeMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/AnalysisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/AnalysisService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/impl/AnalysisServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/impl/AnalysisServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/web/AnalyseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/web/AnalyseController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cyquen/employee/ApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cyquen/employee/ApplicationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dailyAnalysis.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dailyAnalysis.ftlh" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +171,7 @@
       <workItem from="1672838005017" duration="16000" />
       <workItem from="1672886786976" duration="11201000" />
       <workItem from="1672972730551" duration="1259000" />
-      <workItem from="1672996224858" duration="2816000" />
+      <workItem from="1672996224858" duration="5424000" />
     </task>
     <task id="LOCAL-00001" summary="initial version">
       <created>1672728017577</created>
@@ -202,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672997147937</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add address distribution analysis">
+      <created>1673005084117</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1673005084117</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,7 +219,8 @@
     <MESSAGE value="add employee workplace analysis" />
     <MESSAGE value="add employee info statistics" />
     <MESSAGE value="support remember-me persistence" />
-    <option name="LAST_COMMIT_MESSAGE" value="support remember-me persistence" />
+    <MESSAGE value="add address distribution analysis" />
+    <option name="LAST_COMMIT_MESSAGE" value="add address distribution analysis" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

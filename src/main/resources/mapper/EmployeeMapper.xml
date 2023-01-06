@@ -36,8 +36,14 @@
         GROUP BY name;
     </select>
     <select id="findGenderNumber" resultType="com.cyquen.employee.model.Count">
-        select gender as name, count(*) as value
+        select gender as name, count(1) as value
         from employee
         group by gender
+    </select>
+    <select id="findPostNumber" resultType="com.cyquen.employee.model.Count">
+        select post as name, count(1) as value
+        from employee
+        group by post
+        order by value desc
     </select>
 </mapper>

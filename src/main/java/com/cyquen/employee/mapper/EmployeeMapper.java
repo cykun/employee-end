@@ -22,4 +22,6 @@ public interface EmployeeMapper {
     List<Count> findAgeRangeNumber();
 
     List<Count> findGenderNumber();
+
+    List<Count> findPostNumber();
 }
