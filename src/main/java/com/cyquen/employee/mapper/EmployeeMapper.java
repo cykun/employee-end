@@ -2,7 +2,7 @@ package com.cyquen.employee.mapper;
 
 import com.cyquen.employee.model.Count;
 import com.cyquen.employee.model.Employee;
-import com.cyquen.employee.model.WorkplaceDistribution;
+import com.cyquen.employee.model.Distribution;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -17,7 +17,7 @@ public interface EmployeeMapper {
 
     List<Integer> findAllId();
 
-    List<WorkplaceDistribution> findWorkplaceDistribution();
+    List<Distribution> findDistribution(@Param("type") String type);
 
     List<Count> findAgeRangeNumber();
 

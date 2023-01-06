@@ -18,10 +18,10 @@
         select id
         from employee
     </select>
-    <select id="findWorkplaceDistribution" resultType="com.cyquen.employee.model.WorkplaceDistribution">
-        select workplace, count(1) population
+    <select id="findDistribution" resultType="com.cyquen.employee.model.Distribution">
+        select ${type} as address, count(1) population
         from employee
-        group by workplace
+        group by ${type}
     </select>
     <select id="findAgeRangeNumber" resultType="com.cyquen.employee.model.Count">
         SELECT CASE

@@ -3,7 +3,7 @@ package com.cyquen.employee.web;
 import com.cyquen.employee.model.Count;
 import com.cyquen.employee.model.EmployeeSimilarity;
 import com.cyquen.employee.model.FrequencyData;
-import com.cyquen.employee.model.WorkplaceDistribution;
+import com.cyquen.employee.model.Distribution;
 import com.cyquen.employee.service.AnalysisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -71,9 +71,9 @@ public class AnalyseController {
         return analysisService.findLongestUsage(employeeId, date);
     }
 
-    @GetMapping("/employees/workplace-distribution")
-    public List<WorkplaceDistribution> queryWorkplaceDistribution() {
-        return analysisService.findWorkplaceDistribution();
+    @GetMapping("/employees/distribution/{type}")
+    public List<Distribution> queryWorkplaceDistribution(@PathVariable("type") String type) {
+        return analysisService.findWorkplaceDistribution(type);
     }
 
     @GetMapping("/employees/statistics/{type}")

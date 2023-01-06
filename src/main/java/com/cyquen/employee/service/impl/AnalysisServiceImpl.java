@@ -5,7 +5,6 @@ import com.cyquen.employee.mapper.EmployeeMapper;
 import com.cyquen.employee.model.*;
 import com.cyquen.employee.service.AnalysisService;
 import com.cyquen.employee.util.TimeUtils;
-import org.checkerframework.checker.units.qual.C;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
@@ -126,8 +125,8 @@ public class AnalysisServiceImpl implements AnalysisService {
     }
 
     @Override
-    public List<WorkplaceDistribution> findWorkplaceDistribution() {
-        return employeeMapper.findWorkplaceDistribution();
+    public List<Distribution> findWorkplaceDistribution(String type) {
+        return employeeMapper.findDistribution(type);
     }
 
     @Override
