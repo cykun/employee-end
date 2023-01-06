@@ -1,5 +1,6 @@
 package com.cyquen.employee.config;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -10,7 +11,9 @@ import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 
+import javax.sql.DataSource;
 import java.util.UUID;
 
 /**
@@ -20,9 +23,19 @@ import java.util.UUID;
 @EnableWebSecurity
 public class WebSecurityConfig {
 
+    @Autowired
+    public DataSource dataSource;
+
     @Bean
     public PasswordEncoder passwordEncoder() {
         return PasswordEncoderFactories.createDelegatingPasswordEncoder();
+    }
+
+    private JdbcTokenRepositoryImpl jdbcTokenRepository() {
+        JdbcTokenRepositoryImpl jdbcTokenRepository = new JdbcTokenRepositoryImpl();
+        // jdbcTokenRepository.setCreateTableOnStartup(true);
+        jdbcTokenRepository.setDataSource(dataSource);
+        return jdbcTokenRepository;
     }
 
     @Bean
@@ -54,6 +67,7 @@ public class WebSecurityConfig {
                 .and()
                 .rememberMe()
                 .key(UUID.randomUUID().toString())
+                .tokenRepository(jdbcTokenRepository())
                 .and()
                 .csrf()
                 .disable();
