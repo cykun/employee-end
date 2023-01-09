@@ -59,9 +59,9 @@
 <script>
     function second(value) {
 
-        var theTime = parseInt(value);// 秒
-        var middle = 0;// 分
-        var hour = 0;// 小时
+        let theTime = parseInt(value);// 秒
+        let middle = 0;// 分
+        let hour = 0;// 小时
 
         if (theTime >= 60) {
             middle = parseInt(theTime / 60);
@@ -71,7 +71,7 @@
                 middle = parseInt(middle % 60);
             }
         }
-        var result = "" + parseInt(theTime) + "秒";
+        let result = "" + parseInt(theTime) + "秒";
         if (middle > 0) {
             result = "" + parseInt(middle) + "分" + result;
         }

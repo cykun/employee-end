@@ -129,10 +129,6 @@
                         alert("出现了错误")
                     }
                 })
-            },
-            logout() {
-                localStorage.removeItem("loginInfo")
-                window.location.href = "/login"
             }
         }
     })
