@@ -18,6 +18,7 @@ import java.util.Set;
  * 数据分析控制器
  */
 @RestController
+@RequestMapping("/employees")
 public class AnalyseController {
 
     @Autowired
@@ -29,7 +30,7 @@ public class AnalyseController {
      * @param employeeId 员工ID
      * @return 员工列表
      */
-    @GetMapping("/employees/similar/{employId}")
+    @GetMapping("/similar/{employId}")
     public List<EmployeeSimilarity> querySimilarEmployees(@PathVariable("employId") Integer employeeId) {
         return analysisService.findNearbyEmployees(employeeId);
     }
@@ -40,7 +41,7 @@ public class AnalyseController {
      * @param functions 功能列表
      * @return 员工列表
      */
-    @GetMapping("/employees/functions")
+    @GetMapping("/functions")
     public List<EmployeeSimilarity> queryEmployeesByFunctions(@RequestParam("functions") Set<Integer> functions) {
         return analysisService.findNearbyEmployees(functions);
     }
@@ -52,7 +53,7 @@ public class AnalyseController {
      * @param date       日期
      * @return 访问频率情况
      */
-    @GetMapping("/employees/daily")
+    @GetMapping("/daily")
     public List<FrequencyData> queryDailyUseFrequency(@RequestParam("employeeId") Integer employeeId,
                                                       @RequestParam("date") @DateTimeFormat(pattern = "yyyy-MM-dd") Date date) {
         return analysisService.findDailyFrequencyData(employeeId, date);
@@ -65,19 +66,24 @@ public class AnalyseController {
      * @param date       日期
      * @return 结果列表
      */
-    @GetMapping("/employees/daily/longest")
+    @GetMapping("/daily/longest")
     public List<Map.Entry<Integer, Long>> queryDailyLongestUsage(@RequestParam("employeeId") Integer employeeId,
                                                                  @RequestParam("date") @DateTimeFormat(pattern = "yyyy-MM-dd") Date date) {
         return analysisService.findLongestUsage(employeeId, date);
     }
 
-    @GetMapping("/employees/distribution/{type}")
+    @GetMapping("/distribution/{type}")
     public List<Distribution> queryWorkplaceDistribution(@PathVariable("type") String type) {
         return analysisService.findWorkplaceDistribution(type);
     }
 
-    @GetMapping("/employees/statistics/{type}")
+    @GetMapping("/statistics/{type}")
     public List<Count> queryStatistics(@PathVariable("type") String type) {
         return analysisService.statistics(type);
+    }
+
+    @GetMapping("/post-generality/{post}")
+    public Set<Integer> queryPostGenerality(@PathVariable("post") String post) {
+        return analysisService.postGenerality(post);
     }
 }

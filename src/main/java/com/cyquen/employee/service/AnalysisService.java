@@ -26,4 +26,12 @@ public interface AnalysisService {
     List<Distribution> findWorkplaceDistribution(String type);
 
     List<Count> statistics(String type);
+
+    /**
+     * 岗位共性分析
+     *
+     * @param post 岗位名称
+     * @return 岗位共性列表
+     */
+    Set<Integer> postGenerality(String post);
 }

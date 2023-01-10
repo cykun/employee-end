@@ -46,4 +46,7 @@
         group by post
         order by value desc
     </select>
+    <select id="findAllByPost" resultType="java.lang.Integer">
+        select id from employee where post = #{post}
+    </select>
 </mapper>

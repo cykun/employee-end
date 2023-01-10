@@ -138,4 +138,22 @@ public class AnalysisServiceImpl implements AnalysisService {
             default -> null;
         };
     }
+
+    @Override
+    public Set<Integer> postGenerality(String post) {
+        List<Integer> employees = employeeMapper.findAllByPost(post);
+        if (employees.size() == 0) {
+            return null;
+        }
+        Iterator<Integer> iterator = employees.iterator();
+        Set<Integer> sameLog = employeeLogMapper.findFunctionIdsByEmployeeId(iterator.next());
+        while (iterator.hasNext()) {
+            Set<Integer> eFunctions = employeeLogMapper.findFunctionIdsByEmployeeId(iterator.next());
+            sameLog = sameLog.stream().filter(eFunctions::contains).collect(Collectors.toSet());
+            if (sameLog.size() == 0) {
+                break;
+            }
+        }
+        return sameLog;
+    }
 }

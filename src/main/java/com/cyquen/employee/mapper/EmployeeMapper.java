@@ -24,4 +24,6 @@ public interface EmployeeMapper {
     List<Count> findGenderNumber();
 
     List<Count> findPostNumber();
+
+    List<Integer> findAllByPost(@Param("post") String post);
 }
