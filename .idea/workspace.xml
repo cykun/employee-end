@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc8697e6-4d10-4cd6-9366-2f5d941c9f0d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4007e9f6-a656-466b-817e-c4b6c5d00022/storage_v2/_src_/schema/information_schema.FNRwLQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4007e9f6-a656-466b-817e-c4b6c5d00022/storage_v2/_src_/schema/information_schema.FNRwLQ.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/mapper/EmployeeMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/mapper/EmployeeMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/AnalysisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/AnalysisService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/impl/AnalysisServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/impl/AnalysisServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/web/AnalyseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/web/AnalyseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/EmployeeMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/cyquen/employee/ApplicationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/cyquen/employee/ApplicationTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,7 +169,8 @@
       <workItem from="1672972730551" duration="1259000" />
       <workItem from="1672996224858" duration="8425000" />
       <workItem from="1673248297107" duration="9320000" />
-      <workItem from="1673315333190" duration="7477000" />
+      <workItem from="1673315333190" duration="9426000" />
+      <workItem from="1673401361021" duration="754000" />
     </task>
     <task id="LOCAL-00001" summary="initial version">
       <created>1672728017577</created>
@@ -226,7 +221,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673265888432</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add post generality analysis">
+      <created>1673353414215</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1673353414215</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +242,8 @@
     <MESSAGE value="add address distribution analysis" />
     <MESSAGE value="add post analysis" />
     <MESSAGE value="resolve CookieTheftException" />
-    <option name="LAST_COMMIT_MESSAGE" value="resolve CookieTheftException" />
+    <MESSAGE value="add post generality analysis" />
+    <option name="LAST_COMMIT_MESSAGE" value="add post generality analysis" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
