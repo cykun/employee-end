@@ -141,14 +141,17 @@ public class AnalysisServiceImpl implements AnalysisService {
 
     @Override
     public Set<Integer> postGenerality(String post) {
-        List<Integer> employees = employeeMapper.findAllByPost(post);
+        // 工作至少1年的员工
+        List<Integer> employees = employeeMapper.findAllByPost(post, TimeUtils.beforeYear(1));
         if (employees.size() == 0) {
             return null;
         }
         Iterator<Integer> iterator = employees.iterator();
-        Set<Integer> sameLog = employeeLogMapper.findFunctionIdsByEmployeeId(iterator.next());
+        Integer employeeId = iterator.next();
+        Set<Integer> sameLog = employeeLogMapper.findFunctionIdsByEmployeeId(employeeId);
         while (iterator.hasNext()) {
-            Set<Integer> eFunctions = employeeLogMapper.findFunctionIdsByEmployeeId(iterator.next());
+            employeeId = iterator.next();
+            Set<Integer> eFunctions = employeeLogMapper.findFunctionIdsByEmployeeId(employeeId);
             sameLog = sameLog.stream().filter(eFunctions::contains).collect(Collectors.toSet());
             if (sameLog.size() == 0) {
                 break;

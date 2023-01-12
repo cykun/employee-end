@@ -6,6 +6,7 @@ import com.cyquen.employee.model.Distribution;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.Date;
 import java.util.List;
 
 @Mapper
@@ -25,5 +26,5 @@ public interface EmployeeMapper {
 
     List<Count> findPostNumber();
 
-    List<Integer> findAllByPost(@Param("post") String post);
+    List<Integer> findAllByPost(@Param("post") String post,@Param("date") Date date);
 }

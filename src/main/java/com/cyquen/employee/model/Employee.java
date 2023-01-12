@@ -12,14 +12,13 @@ import java.util.Objects;
 public class Employee implements Serializable {
 
     private Integer id;
-
     private String name;
-
     private String gender;
     private String address;
     private String academicDegree;
     private String workplace;
     private Date birthday;
+    private Date entryTime;
 
     public Integer getId() {
         return id;
@@ -75,6 +74,14 @@ public class Employee implements Serializable {
 
     public void setBirthday(Date birthday) {
         this.birthday = birthday;
+    }
+
+    public Date getEntryTime() {
+        return entryTime;
+    }
+
+    public void setEntryTime(Date entryTime) {
+        this.entryTime = entryTime;
     }
 
     @Override

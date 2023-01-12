@@ -9,14 +9,16 @@ create table employee (
     address varchar(64) not null, /* 家庭地址 */
     academic_degree varchar(4) not null, /* 学历 */
     workplace varchar(64) not null, /* 工作地址 */
-    birthdate date not null
+    birthdate date not null,
+    post varchar(16) not null,
+    entry_time date not null
 )  CHARSET=utf8 auto_increment=1 comment='员工表';
 
-insert into employee values (1, "员工1", "男", "福州市", "硕士", "福州市", 19890102);
-insert into employee values (2, "员工2", "女", "厦门市", "硕士", "福州市", 19880806);
-insert into employee values (3, "员工3", "男", "广州市", "硕士", "深圳市", 19950707);
-insert into employee values (4, "员工4", "男", "上海市", "硕士", "上海市", 19940302);
-insert into employee values (5, "员工5", "女", "福州市", "硕士", "福州市", 19910304);
+insert into employee values (1, "员工1", "男", "福州市", "硕士", "福州市", 19890102, "JAVA开发", 20150101);
+insert into employee values (2, "员工2", "女", "厦门市", "硕士", "福州市", 19880806, "JAVA开发", 20160101);
+insert into employee values (3, "员工3", "男", "广州市", "硕士", "深圳市", 19950707, "C++开发", 20200101);
+insert into employee values (4, "员工4", "男", "上海市", "硕士", "上海市", 19940302, "HR", 20180101);
+insert into employee values (5, "员工5", "女", "福州市", "硕士", "福州市", 19910304, "经理", 20160101);
 
 drop table if exists employee_log;
 create table employee_log (

@@ -18,4 +18,12 @@ public final class TimeUtils {
                 calendar.get(Calendar.DAY_OF_MONTH), 23, 59, 59);
         return calendar.getTime();
     }
+
+    public static Date beforeYear(int year) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(new Date());
+        calendar.set(calendar.get(Calendar.YEAR) - year, calendar.get(Calendar.MONTH),
+                calendar.get(Calendar.DAY_OF_MONTH));
+        return calendar.getTime();
+    }
 }

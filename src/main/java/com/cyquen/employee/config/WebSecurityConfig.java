@@ -59,9 +59,11 @@ public class WebSecurityConfig {
         http
                 .authorizeHttpRequests((authorizeHttpRequests) ->
                         authorizeHttpRequests.requestMatchers("/assets/**", "/css/**", "/images/**")
-                                .permitAll()
-                                .anyRequest()
-                                .authenticated())
+                                .permitAll());
+        http
+                .authorizeHttpRequests((authorizeHttpRequests) -> {
+                    authorizeHttpRequests.anyRequest().authenticated();
+                })
                 .formLogin()
                 .loginPage("/login")
                 .permitAll()

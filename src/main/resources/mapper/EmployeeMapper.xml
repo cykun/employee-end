@@ -47,6 +47,8 @@
         order by value desc
     </select>
     <select id="findAllByPost" resultType="java.lang.Integer">
-        select id from employee where post = #{post}
+        select id
+        from employee
+        where post = #{post} and entry_time &lt; #{date}
     </select>
 </mapper>
