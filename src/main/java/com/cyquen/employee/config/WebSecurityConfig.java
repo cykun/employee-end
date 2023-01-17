@@ -1,5 +1,6 @@
 package com.cyquen.employee.config;
 
+import com.cyquen.employee.service.SysLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.server.ConfigurableWebServerFactory;
 import org.springframework.boot.web.server.ErrorPage;
@@ -28,7 +29,11 @@ import java.util.UUID;
 public class WebSecurityConfig {
 
     @Autowired
-    public DataSource dataSource;
+    DataSource dataSource;
+
+    @Autowired
+    SysLogService sysLogService;
+
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -65,6 +70,8 @@ public class WebSecurityConfig {
                     authorizeHttpRequests.anyRequest().authenticated();
                 })
                 .formLogin()
+                .successHandler(new CustomSavedRequestAwareAuthenticationSuccessHandler(sysLogService))
+                .failureHandler(new CustomSimpleUrlAuthenticationFailureHandler(sysLogService))
                 .loginPage("/login")
                 .permitAll()
                 .and()

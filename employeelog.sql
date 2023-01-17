@@ -14,11 +14,11 @@ create table employee (
     entry_time date not null
 )  CHARSET=utf8 auto_increment=1 comment='员工表';
 
-insert into employee values (1, "员工1", "男", "福州市", "硕士", "福州市", 19890102, "JAVA开发", 20150101);
-insert into employee values (2, "员工2", "女", "厦门市", "硕士", "福州市", 19880806, "JAVA开发", 20160101);
-insert into employee values (3, "员工3", "男", "广州市", "硕士", "深圳市", 19950707, "C++开发", 20200101);
-insert into employee values (4, "员工4", "男", "上海市", "硕士", "上海市", 19940302, "HR", 20180101);
-insert into employee values (5, "员工5", "女", "福州市", "硕士", "福州市", 19910304, "经理", 20160101);
+insert into employee values (1, "员工1", "男", "福建", "硕士", "福建", 19890102, "JAVA开发", 20150101);
+insert into employee values (2, "员工2", "女", "福建", "硕士", "福建", 19880806, "JAVA开发", 20160101);
+insert into employee values (3, "员工3", "男", "广东", "硕士", "广东", 19950707, "C++开发", 20200101);
+insert into employee values (4, "员工4", "男", "上海", "硕士", "上海", 19940302, "HR", 20180101);
+insert into employee values (5, "员工5", "女", "河北", "硕士", "上海", 19910304, "经理", 20160101);
 
 drop table if exists employee_log;
 create table employee_log (
@@ -46,3 +46,14 @@ INSERT INTO employee_log (employee_id, function_id, create_time) VALUES (3, 2, '
 INSERT INTO employee_log (employee_id, function_id, create_time) VALUES (3, 4, '2022-12-17 15:42:18');
 INSERT INTO employee_log (employee_id, function_id, create_time) VALUES (4, 1, '2022-12-17 15:42:27');
 INSERT INTO employee_log (employee_id, function_id, create_time) VALUES (5, 5, '2022-12-17 15:42:34');
+
+drop table if exists sys_log;
+create table sys_log(
+    id int not null primary key auto_increment comment 'id',
+    username varchar(8) null comment '操作的用户名',
+    method varchar(255) null comment '请求方法',
+    message varchar(255) not null comment '消息',
+    ip varchar(20) null comment 'ip',
+    uri varchar(255) null comment '请求地址',
+    create_time datetime not null default now() comment '创建时间'
+);
