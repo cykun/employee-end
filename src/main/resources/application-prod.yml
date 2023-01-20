@@ -13,6 +13,16 @@ spring:
     template-loader-path: classpath:/templates/
   cache:
     type: caffeine
+#  mail:
+#    host: ""
+#    port: 25
+#    username:
+#    password:
+#    default-encoding: utf-8
+#    properties:
+#      timeout: 5000
+#      connection-timeout: 5000
+#      write-timeout: 5000
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml

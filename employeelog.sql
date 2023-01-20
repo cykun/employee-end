@@ -51,7 +51,7 @@ drop table if exists sys_log;
 create table sys_log(
     id int not null primary key auto_increment comment 'id',
     username varchar(8) null comment '操作的用户名',
-    method varchar(255) null comment '请求方法',
+    level smallint not null comment '级别 0 消息，1 警告，2 错误',
     message varchar(255) not null comment '消息',
     ip varchar(20) null comment 'ip',
     uri varchar(255) null comment '请求地址',

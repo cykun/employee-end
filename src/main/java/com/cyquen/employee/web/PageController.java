@@ -44,4 +44,9 @@ public class PageController {
     public ModelAndView employeeAnalysis() {
         return new ModelAndView("employeeAnalysis");
     }
+
+    @GetMapping("/syslog")
+    public ModelAndView sysLog() {
+        return new ModelAndView("syslog");
+    }
 }

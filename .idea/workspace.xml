@@ -5,15 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc8697e6-4d10-4cd6-9366-2f5d941c9f0d" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/4007e9f6-a656-466b-817e-c4b6c5d00022.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4007e9f6-a656-466b-817e-c4b6c5d00022.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/4007e9f6-a656-466b-817e-c4b6c5d00022/storage_v2/_src_/schema/information_schema.FNRwLQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/4007e9f6-a656-466b-817e-c4b6c5d00022/storage_v2/_src_/schema/information_schema.FNRwLQ.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/employeelog.sql" beforeDir="false" afterPath="$PROJECT_DIR$/employeelog.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/LogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/SysLogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/impl/LogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/impl/EmployeeLogServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/web/LogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/web/SysLogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/SysLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/service/SysLogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/web/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/web/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/web/SysLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cyquen/employee/web/SysLogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-prod.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-prod.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/dailyAnalysis.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/dailyAnalysis.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.ftlh" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +31,7 @@
         <option value="HTML File" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -183,7 +189,10 @@
       <workItem from="1673521922657" duration="4034000" />
       <workItem from="1673590736880" duration="5678000" />
       <workItem from="1673943021609" duration="1667000" />
-      <workItem from="1673944713769" duration="3557000" />
+      <workItem from="1673944713769" duration="6470000" />
+      <workItem from="1674026807958" duration="6661000" />
+      <workItem from="1674114257554" duration="7250000" />
+      <workItem from="1674204210580" duration="2129000" />
     </task>
     <task id="LOCAL-00001" summary="initial version">
       <created>1672728017577</created>
@@ -255,7 +264,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673524194216</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="add system log module">
+      <created>1673948575407</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1673948575407</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -272,7 +288,8 @@
     <MESSAGE value="add post generality analysis" />
     <MESSAGE value="add comments" />
     <MESSAGE value="do some optimization" />
-    <option name="LAST_COMMIT_MESSAGE" value="do some optimization" />
+    <MESSAGE value="add system log module" />
+    <option name="LAST_COMMIT_MESSAGE" value="add system log module" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

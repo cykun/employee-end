@@ -9,12 +9,12 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.factory.PasswordEncoderFactories;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.AuthenticationFailureHandler;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.rememberme.CookieTheftException;
 import org.springframework.security.web.authentication.rememberme.JdbcTokenRepositoryImpl;
 
@@ -34,6 +34,12 @@ public class WebSecurityConfig {
     @Autowired
     SysLogService sysLogService;
 
+    @Autowired
+    AuthenticationFailureHandler authenticationFailureHandler;
+
+    @Autowired
+    AuthenticationSuccessHandler authenticationSuccessHandler;
+
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -49,14 +55,7 @@ public class WebSecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService(com.cyquen.employee.config.UserProperties user) {
-        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-        manager.createUser(User.builder()
-                .passwordEncoder(passwordEncoder()::encode)
-                .username(user.getUsername())
-                .password(user.getPassword())
-                .roles(user.getRole())
-                .build());
-        return manager;
+        return new CustomUserDetailsService(passwordEncoder(), user);
     }
 
     @Bean
@@ -70,8 +69,8 @@ public class WebSecurityConfig {
                     authorizeHttpRequests.anyRequest().authenticated();
                 })
                 .formLogin()
-                .successHandler(new CustomSavedRequestAwareAuthenticationSuccessHandler(sysLogService))
-                .failureHandler(new CustomSimpleUrlAuthenticationFailureHandler(sysLogService))
+                .successHandler(authenticationSuccessHandler)
+                .failureHandler(authenticationFailureHandler)
                 .loginPage("/login")
                 .permitAll()
                 .and()
@@ -80,7 +79,7 @@ public class WebSecurityConfig {
                 .and()
                 .rememberMe()
                 .key(UUID.randomUUID().toString())
-                .tokenRepository(jdbcTokenRepository())
+                // .tokenRepository(jdbcTokenRepository())
                 .and()
                 .csrf()
                 .disable();
