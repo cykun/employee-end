@@ -1038,7 +1038,7 @@ sys|schema||mysql.sys|localhost|TRIGGER|G</Grants>
     </table>
     <table id="299" parent="288" name="employee_log">
       <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+      <CollationName>utf8mb3_general_ci</CollationName>
     </table>
     <table id="300" parent="288" name="persistent_logins">
       <Engine>InnoDB</Engine>
@@ -1169,7 +1169,7 @@ create_time</ColNames>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
     <column id="326" parent="301" name="id">
-      <AutoIncrement>1</AutoIncrement>
+      <AutoIncrement>10</AutoIncrement>
       <Comment>id</Comment>
       <DasType>int|0s</DasType>
       <NotNull>1</NotNull>

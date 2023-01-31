@@ -24,8 +24,8 @@ drop table if exists employee_log;
 create table employee_log (
     employee_id int not null,
     function_id int not null,
-    time datetime not null,
-    primary key(employee_id, time)
+    create_time datetime not null,
+    primary key(employee_id, create_time)
 ) charset =utf8;
 
 INSERT INTO employee_log (employee_id, function_id, create_time) VALUES (1, 1, '2022-12-17 09:02:29');

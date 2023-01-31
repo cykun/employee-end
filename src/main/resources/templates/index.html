@@ -65,10 +65,10 @@
     <div class="p-5 mb-4 bg-light rounded-3">
         <div class="container-fluid py-1">
             <label class="form-label">功能点列表</label>
-            <div class="input-group" style="max-width: 360px">
+            <div class="input-group" style="max-width: 480px">
                 <label>
                     <input v-model="functions" @keyup.enter.native="querySimilarEmployees" type="text"
-                           class="form-control" placeholder="请输入功能点列表，例如：1,2,3">
+                           class="form-control" placeholder="请输入功能点列表，例如：1,2,3" style="width: 300px">
                 </label>
                 <button @click="queryEmployeesByFunctions" class="btn btn-secondary">检索</button>
             </div>
@@ -109,7 +109,7 @@
                 employeeSimilarityList: [],
                 employeesList: [],
                 axiosInstance: axios.create({
-                    baseURL: 'http://127.0.0.1:8080',
+                    // baseURL: 'http://127.0.0.1:8080',
                     timeout: 5000
                 })
             }

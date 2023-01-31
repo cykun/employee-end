@@ -6,23 +6,23 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/employee?user=root&password=13695932659&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
+    url: jdbc:mysql://172.17.0.1:3306/employee?user=root&password=password&useUnicode=true&characterEncoding=utf8&autoReconnect=true&failOverReadOnly=false
     type: com.alibaba.druid.pool.DruidDataSource
-  freemarker:
-    request-context-attribute: req
-    template-loader-path: classpath:/templates/
   cache:
     type: caffeine
-#  mail:
-#    host: ""
-#    port: 25
-#    username:
-#    password:
-#    default-encoding: utf-8
-#    properties:
-#      timeout: 5000
-#      connection-timeout: 5000
-#      write-timeout: 5000
+  mail:
+    host: smtp.163.com
+    port: 25
+    username: 13695932659@163.com
+    password: CERBPTMPJFLVSXCR
+    default-encoding: utf-8
+    properties:
+      timeout: 5000
+      connection-timeout: 5000
+      write-timeout: 5000
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
